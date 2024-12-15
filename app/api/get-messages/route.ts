@@ -4,7 +4,7 @@ import UserModel from "@/model/User";
 import mongoose from "mongoose";
 
 
-export async function GET(request: Request) {
+export async function GET() {
     await dbConnect()
     const session = await auth()
 

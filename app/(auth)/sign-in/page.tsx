@@ -1,7 +1,7 @@
 "use client";
 
 import { signIn } from "next-auth/react";
-import { useForm, SubmitHandler } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
 import { signInSchema } from "@/schema/signInSchema";

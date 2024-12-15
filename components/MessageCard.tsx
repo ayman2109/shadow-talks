@@ -16,13 +16,13 @@ import {
 import {
     Card,
     CardContent,
-    CardDescription,
+
     CardFooter,
     CardHeader,
-    CardTitle,
+
 } from "@/components/ui/card"
 import { Button } from './ui/button'
-import { X } from 'lucide-react'
+
 import { Message } from '@/model/User'
 import { useToast } from '@/hooks/use-toast'
 import axios, { AxiosError } from 'axios'

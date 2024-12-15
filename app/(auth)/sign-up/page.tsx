@@ -56,7 +56,7 @@ const SignUp = () => {
   const onSubmit: SubmitHandler<FormData> = async (data) => {
     setIsSubmitting(true)
     try {
-        const response = await axios.post("/api/sign-up", data)
+        await axios.post("/api/sign-up", data)
         toast({
             title: "sign-up successful"
         })

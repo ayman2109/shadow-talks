@@ -77,7 +77,7 @@ const DashBoard = () => {
         }  finally {
             setIsLoading(false)
         }
-    }, [setIsLoading, setIsSwitchLoading])
+    }, [setIsLoading, setIsSwitchLoading, toast])
     
     const handleSwitchChange = async () => {
         try {
@@ -149,7 +149,7 @@ const DashBoard = () => {
 
 
         <Switch 
-      
+         {...register("isAcceptingMessages")}
          checked={acceptMessages}
          onCheckedChange={handleSwitchChange}
          disabled={isSwitchLoading}
@@ -181,7 +181,7 @@ const DashBoard = () => {
        
         <div className="m-10 grid grid-cols-1 md:grid-cols-2 gap-6">
             {messages.length > 0 ? (
-              messages.map((message: Message, index) => (
+              messages.map((message: Message) => (
                 <MessageCard
                   key={message._id as string}
                   message={message}

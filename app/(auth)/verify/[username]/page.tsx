@@ -6,7 +6,7 @@ import ApiResponse from "@/schema/apiResponse";
 import { zodResolver } from "@hookform/resolvers/zod";
 import React from "react";
 import { z } from "zod";
-import axios, { Axios, AxiosError } from "axios"
+import axios, { AxiosError } from "axios"
 import { useToast } from "@/hooks/use-toast";
 import { useRouter } from "next/navigation";
 // Define the schema type for better type inference
@@ -24,7 +24,7 @@ const VerifyCodePage =  (  ) => {
 
   const onSubmit = async  (data: VerifyCodeFormData) => {
     try {
-        const response = await axios.post('/api/verify-code', { username: params.username, code: data.code})
+        await axios.post('/api/verify-code', { username: params.username, code: data.code})
         toast({
           title: "verification successful"
         })

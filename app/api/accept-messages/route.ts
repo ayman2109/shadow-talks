@@ -2,7 +2,7 @@
 import { auth } from "../../../auth"
 import dbConnect from "@/lib/dbConnect";
 import UserModel from "@/model/User";
-import { User } from "next-auth"
+
 
 
 export async function POST(request: Request) {
@@ -39,7 +39,7 @@ export async function POST(request: Request) {
 
 
     } catch (error) {
-        console.log("Failed to update user to accept messages")
+        console.log("Failed to update user to accept messages", error)
         return Response.json({
             success: false,
             message: "Failed to update user to accept messages"
