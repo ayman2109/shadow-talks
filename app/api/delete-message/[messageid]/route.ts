@@ -2,13 +2,13 @@ import { auth } from "@/auth";
 import dbConnect from "@/lib/dbConnect";
 import UserModel from "@/model/User";
 import mongoose from "mongoose";
-import { NextApiRequest } from "next";
 
 
 
-export async function DELETE(request: NextApiRequest, { params }: { params: Promise<{ messageid: string }> } ) {
 
-    
+export async function DELETE(request: Request, { params }: { params: Promise<{ messageid: string }> } ) {
+
+    // You can use `request` here in the future if needed
     const messageid = (await params).messageid
     await dbConnect();
 

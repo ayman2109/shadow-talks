@@ -47,7 +47,7 @@ const DashBoard = () => {
         }  finally {
             setIsSwitchLoading(false)
         }
-    }, [setValue])
+    }, [setValue, toast, setIsSwitchLoading])
 
     const handleDeleteMessage = (messageID: string) => {
         
@@ -77,7 +77,7 @@ const DashBoard = () => {
         }  finally {
             setIsLoading(false)
         }
-    }, [setIsLoading, setIsSwitchLoading, toast])
+    }, [setIsLoading, toast])
     
     const handleSwitchChange = async () => {
         try {
