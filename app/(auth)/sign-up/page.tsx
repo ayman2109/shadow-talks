@@ -90,7 +90,7 @@ const SignUp = () => {
             {...register('username', { required: 'Username is required' })}
           />
           {}
-          {isCheckingUsername && <Loader2/>}
+          {isCheckingUsername && <Loader2 className='animate-spin'/>}
           <p className={`text-sm ${userNameMessage === "Username is available" ? 'text-green-400' : 'text-red-600'} mt-2`}>{userNameMessage}</p>
           {errors.username && <p className="text-sm text-red-500 mt-2">{errors.username.message}</p>}
         </div>
