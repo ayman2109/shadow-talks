@@ -112,7 +112,7 @@ const DashBoard = () => {
             
         }
         initialize()
-    }, [session, fetchAcceptingMessages, fetchMessages])
+    }, [ fetchAcceptingMessages, fetchMessages ])
 
     if(!session || !session?.user) return <div className="text-center"> <LoaderCircle /> </div>
 
